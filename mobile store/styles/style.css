@@ -1,0 +1,76 @@
+@import url("https://fonts.google.com/specimen/Outfit");
+*{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;
+	position: relative;
+	font-family: "montserrat";
+}
+img{
+	width: 100%;
+	border-radius: 1em;
+}
+#container{
+	width: 100%;
+	display: grid;
+	place-content: center;
+	min-height: 100vh;
+	background-color: hsl(212, 45%, 89%);
+	transition: .3s all ease;
+}
+.card{
+	max-width: 370px;
+	padding: 1em;
+	background-color: white;
+	border-radius: 1em;
+	text-align: center;
+	box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, .12);
+	transition:.3s all ease ;
+}
+.card:hover{
+	transform:scale(1.015);
+	box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, .12);
+}
+.card:focus{
+	border: 2px solid blue;
+}
+.card > *{
+	margin-bottom:1em;
+	padding: 0 0 1em;
+}
+.card:last-child{
+	padding-bottom:0;
+}
+.card .title h1{
+	font-size:22px;
+}
+.card .description p{
+	margin-top: 1.5em;
+	font-size: 15px;
+}
+
+@media (max-width:375px) {
+	.card{
+		width: 80%;
+		margin: auto;
+
+	}
+	.card .title h1{
+		font-size: 18px;
+	}
+}
+@media (max-width:250px) {
+	.card{
+		width: 95%;
+		margin: auto;
+		padding: 7px;
+	}
+	.card .title h1{
+		font-size: 16px;
+	}
+	.card .description p{
+		margin-top: 1.5em;
+		font-size: 12px;
+	}
+}
+
